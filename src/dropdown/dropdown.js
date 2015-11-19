@@ -260,7 +260,7 @@ angular.module('ui.bootstrap.dropdown', ['ui.bootstrap.position'])
   });
 
   $scope.$on('$locationChangeSuccess', function() {
-    if (scope.getAutoClose() !== 'disabled') {
+    if (scope.getAutoClose() !== 'disabled' && scope.isOpen) {
       scope.isOpen = false;
     }
   });
